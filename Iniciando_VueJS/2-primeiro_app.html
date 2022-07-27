@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        {{mensagem}}
+    </div>
+
+    <script>
+        // variavel que recebe um objeto
+            // serve para manipular elementos do html pelo java escript
+                // el = elemento
+        const vm = new Vue({
+            // id = # class = .
+            // atributos / vars
+            el:'#app',
+            data:{
+                mensagem: 'primeiro template controlado pelo objeto'
+            }
+        })
+
+
+        console.log(vm)
+    </script>
+    
+    
+</body>
+</html>
