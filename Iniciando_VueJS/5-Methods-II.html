@@ -23,20 +23,23 @@
         const vm = new Vue({
             el:'#app',
             data:{
+                n1:10,
+                n2:5,
+                n3:6
                 
             },
             methods:{
                 somar: function somar(numero){
-                    return numero + 2
+                    return numero + this.n1
                 },
                 subtrair: function(){
-                    return 5 - 2
+                    return this.n3 - this.n2
                 },
                 multiplicar: () => {
-                    return 4 * 2
+                    return this.n2 * this.n1
                 },
                 dividir(){
-                    return 4 / 2
+                    return this.n3 / this.n1
                 }
             }
         })
