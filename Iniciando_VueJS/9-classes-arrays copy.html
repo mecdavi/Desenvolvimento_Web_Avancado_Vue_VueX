@@ -22,12 +22,9 @@
 </head>
 <body>
     <div id="app">
-    <button  @click="evermelho = !evermelho"> cor</button>
-    <button  @click="ebox = !ebox"> box</button>
-    <button  @click="everde = !everde"> texto</button>
     <br>
     <br>
-        <div :class="{vermelho:true, box:true,'texto-verde':false}">
+        <div :class="[evermelho, ebox,everde]">
             Teste de escrita
         </div>
         <br>
@@ -39,9 +36,9 @@
         const vm = new Vue({
             el:'#app',
             data:{
-                evermelho:false,
-                ebox:false,
-                everde:false
+                evermelho:'vermelho',
+                ebox:'box',
+                everde:'verde'
                 
             },
             methods:{
