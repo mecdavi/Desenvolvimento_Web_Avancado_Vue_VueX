@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>Document</title>
+    <style>
+        .vermelho{
+            background-color: red;
+        }
+        .texto-verde{
+            color: green;
+        }
+        .box{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+    <button  @click="evermelho = !evermelho"> cor</button>
+    <button  @click="ebox = !ebox"> box</button>
+    <button  @click="everde = !everde"> texto</button>
+    <br>
+    <br>
+        <div :class="{vermelho:true, box:true,'texto-verde':false}">
+            Teste de escrita
+        </div>
+        <br>
+        <div :class="{vermelho:evermelho, box:ebox,'texto-verde':everde}">
+            Teste de escrita
+        </div>
+    </div>
+    <script>
+        const vm = new Vue({
+            el:'#app',
+            data:{
+                evermelho:false,
+                ebox:false,
+                everde:false
+                
+            },
+            methods:{
+            }
+        })
+        
+    </script>
+</body>
+</html>
